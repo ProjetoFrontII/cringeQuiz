@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ======================================
+            BODY
+========================================= */
+body{
+    /* background-color:; */
+    height: 100%;
+}
+
+/* ======================================
+            FORMULÁRIO
+========================================= */
+
+label{
+	color:white;
+	font-family: sans-serif;
+}
+
+legend{
+    text-align: center;
+}
+
+h1{
+	margin:0px 0px 20px;
+	/* color:white; */
+	font-family: sans-serif;
+	transition: 0.3s ease-in-out;
+}
+
+#form{
+	/* background-color: ; */
+	padding: 30px;
+	/* Aqui q está deixando a margem centralizada */
+	margin: 20px auto;
+	/* Dá uma largura máx de 400px, para ser reponsivo usar % */
+	max-width: 400px;
+}
+
+/* CONFIGURAÇÃO DOS ESPAÇO DO INPUT DO FORMULÁRIO */
+input[type='text'],
+input[type='email'],
+input[type='text'],
+input[type='number']{
+	width: 100%;
+	padding: 10px;
+	background: none;
+	margin-bottom: 30px;
+	border:none;
+	/* Borda do navegador nos elementos, na caixa do input */
+	outline: none;
+	/* color: ; */
+	border-bottom: 1px solid;
+	transition: 0.3s ease-in-out;
+}
+
+/* ESTILIZAR OS BOTÕES */
+.btn{
+	padding: 10px 12px;
+	border-radius: 5px;
+	/* border:none; */
+	background: none;
+	/* color: ; */
+	background-color:white;
+    text-align: center;
+}
+
+/* DIV PARA ALINHAR OS BOTÕES NO CENTRO */
+.div-btn{
+	text-align: center;
+}
