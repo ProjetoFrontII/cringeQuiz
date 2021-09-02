@@ -1,75 +1,131 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* ======================================
-            BODY
-========================================= */
+html{
+    font-size: 10px;
+    --cor-bg-laranja-escuro: #BD532B;
+    --cor-bg-bege-intenso: #CFBE89;
+    --cor-bg-bege-claro: #D6C9A1;
+    --cor-bg-verde-cringe: #39AF9A;
+  
+}
+
 body{
-    /* background-color:; */
-    height: 100%;
+    height: 100vh;
 }
 
-/* ======================================
-            FORMULÁRIO
-========================================= */
+/* Menu */
 
-label{
-	color:white;
-	font-family: sans-serif;
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    background-color: var(--cor-bg-laranja-escuro);
+    color: var(--cor-bg-bege-claro);
+    width: 100%;
+    height: 10vh;
+    
 }
 
-legend{
+.menu h2{
+    font-family: 'Monoton', cursive;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       
+}
+
+li{
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+main{
+    background-color: var(--cor-bg-bege-claro);
+    height: 80vh;
+}
+/* Titulo */
+.titulo{
+    margin: 0 auto;
     text-align: center;
 }
 
 h1{
-	margin:0px 0px 20px;
-	/* color:white; */
-	font-family: sans-serif;
-	transition: 0.3s ease-in-out;
+    color: var(--cor-bg-verde-cringe);
+    font-family: 'Monoton', cursive;
+    font-size: 4rem;
+    
 }
 
-#form{
-	/* background-color: ; */
-	padding: 30px;
-	/* Aqui q está deixando a margem centralizada */
-	margin: 20px auto;
-	/* Dá uma largura máx de 400px, para ser reponsivo usar % */
-	max-width: 400px;
+h3{
+    color: var(--cor-bg-bege-claro);
+    background-color: var(--cor-bg-laranja-escuro);
+    font-size: 1.5rem;
 }
 
-/* CONFIGURAÇÃO DOS ESPAÇO DO INPUT DO FORMULÁRIO */
-input[type='text'],
-input[type='email'],
-input[type='text'],
-input[type='number']{
-	width: 100%;
-	padding: 10px;
-	background: none;
-	margin-bottom: 30px;
-	border:none;
-	/* Borda do navegador nos elementos, na caixa do input */
-	outline: none;
-	/* color: ; */
-	border-bottom: 1px solid;
-	transition: 0.3s ease-in-out;
+
+/* form */
+
+.form{
+    padding: 2rem;
+    margin: 1rem;
+    align-items: center;
+  
 }
 
-/* ESTILIZAR OS BOTÕES */
+
+
+label{
+    font-family: 'Monoton', cursive;
+}
+
+p{
+    padding: 1rem 0;
+    
+}
+
+
+.inputs-radius{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;    
+}
+
 .btn{
-	padding: 10px 12px;
-	border-radius: 5px;
-	/* border:none; */
-	background: none;
-	/* color: ; */
-	background-color:white;
+    margin: 1rem 0 ;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card{
+display: flex;
+justify-content: center;
+}
+
+img{
+    height: 20rem;
+    width: 20rem;
+    border-radius: 00.5rem;
+    border: double;
+    border-color: var(--cor-bg-laranja-escuro);
+
+}
+
+footer{
+    background-color: var(--cor-bg-laranja-escuro);
+    height: 10vh;
+    font-size: 2rem;
     text-align: center;
 }
 
-/* DIV PARA ALINHAR OS BOTÕES NO CENTRO */
-.div-btn{
-	text-align: center;
-}

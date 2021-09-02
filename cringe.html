@@ -1,45 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/cringe.css">
     <title>Cringe Quiz</title>
+
 </head>
 
+
+
 <body>
-    <form id="form" class="slide-form">
+    <header>
 
-            <fieldset>
-                <legend>CRINGE QUIZ</legend>
+        <section class="menu">
+            <h2>CQ</h2>
+            <ul>
+                <li>Contato</li>
+                <li>Sobre nós</li>
+            </ul>
+        </section>
 
-                <div>
-                    <label for="nome">Nome</label>
-                    <input class="input-bk" type="text" id="nome" nome="nome" placeholder="Digite seu nome">
-                    <br><br>
+    </header>
+
+    <main>
+
+        <section class="titulo">
+            <h1>CRINGEQUIZ</h1>
+            <h3>descubra se você é cringe</h3>
+        </section>
+
+        <section class="form" name = "quiz">
+            <div class="input-nome">
+                <label for="nome">nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+
+            <div class="questao um">
+                <p>O que você faz ao acordar?</p>
+
+                <div class="inputs-radius">
+                    <input id="questao-um-a" name="questao1" type="radio" value="3"> Toma cafe?<br>
+                    <input id="questao-um-b" name="questao1" type="radio" value="2"> Vai pra aula?<br>
+                    <input id="questao-um-c" name="questao1" type="radio" value="1"> olha o celular<br>
                 </div>
 
-                <div>
-                    <label for="descricao">Descrição</label>
-                    <input class="input-bk" type="text" id="descricao" nome="descricao" placeholder="Descrição">
-                    <br><br>
+            </div>
+
+            <div class="questao dois">
+                <p>O que você bebe em horário comercial?</p>
+
+                <div class="inputs-radius">
+                    <input id="questao-dois-a" name="questao2" type="radio" value="3"> Cafe?<br>
+                    <input id="questao-dois-b" name="questao2" type="radio" value="2"> Refrigerante?<br>
+                    <input id="questao-dois-c" name="questao2" type="radio" value="1"> Água<br>
                 </div>
 
-                <div>
-                    <label for="url-link">URL</label>
-                    <input class="input-bk" type="text" id="url-link" nome="url-link" placeholder="URL da imagem">
-                    <br><br>
+            </div>
+
+            <div class="questao tres">
+                <p>Para você, o que significa “FDS”?</p>
+
+                <div class="inputs-radius">
+                    <input id="questao-tres-a" name="questao3" type="radio" value="3"> Final de semana, óbvio! <br>
+                    <input id="questao-tres-b" name="questao3" type="radio" value="2"> f*da-se!<br>
+
                 </div>
 
-                <div class="div-btn">
-                    <button type="submit" class="btn bk-btn" value="cadastro">Cadastro</button>
-                </div>
+            </div>
 
-            </fieldset>
+            <div class="btn">
+                <button type="submit" onsubmit="validaNome()" >Enviar Teste!</button>
 
-    </form>
+            </div>
+
+
+        </section>
+<!-- 
+        <section class="card">
+
+            <div>
+                <img src="./img/pensebem.jpg" alt="#">
+            </div>
+       
+        </section> -->
+
+    </main>
+
+    <footer>
+        Teste
+    </footer>
+
+    <script src="./javascript/cringe.js"></script>
+
 </body>
 
 </html>
