@@ -4,12 +4,19 @@
     // var questao3 = document.quiz.questao3.value;
     // var pontos = parseInt(questao1)  + parseInt(questao2) + parseInt(questao3);
 
-    function validaNome(){
-        event.preventDefault();
-        let campoNome = document.getElementById("nome");
-        if (campoNome.value == ""){
-            console.log(Teste)
-            campoNome.focus()
+    const form = document.querySelector("#form")
+    const nomeInput = document.querySelector("#nome")
+    const erroSpan = document.querySelector("#erro")
+
+    form.addEventListener('submit', event=>{
+        event.preventDefault()
+
+        const guardaNome = nomeInput.value.trim()
+
+        if(!guardaNome){
+            erroSpan.innerHTML= '<span>Ops, esse campo é obrigatório!</span>'
         }
-    }
-    
+
+    })
+
+

@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/efec101eb5.js" crossorigin="anonymous"></script>
+    <!-- css -->
     <link rel="stylesheet" href="./css/cringe.css">
     <title>Cringe Quiz</title>
 
@@ -36,9 +40,9 @@
             <h3>descubra se você é cringe</h3>
         </section>
 
-        <section class="form" name = "quiz">
+        <form action="" id="form">
             <div class="input-nome">
-                <label for="nome">nome</label>
+                <label for="nome">nome</label> <span id="erro"></span>
                 <input type="text" name="nome" id="nome">
             </div>
 
@@ -58,32 +62,35 @@
                 <p>O que você bebe em horário comercial?</p>
 
                 <div class="inputs-radius">
+
                     <input id="questao-dois-a" name="questao2" type="radio" value="3"> Cafe?<br>
                     <input id="questao-dois-b" name="questao2" type="radio" value="2"> Refrigerante?<br>
                     <input id="questao-dois-c" name="questao2" type="radio" value="1"> Água<br>
-                </div>
 
-            </div>
-
-            <div class="questao tres">
-                <p>Para você, o que significa “FDS”?</p>
-
-                <div class="inputs-radius">
-                    <input id="questao-tres-a" name="questao3" type="radio" value="3"> Final de semana, óbvio! <br>
-                    <input id="questao-tres-b" name="questao3" type="radio" value="2"> f*da-se!<br>
 
                 </div>
 
-            </div>
+                <div class="questao tres">
+                    <p>Para você, o que significa “FDS”?</p>
 
-            <div class="btn">
-                <button type="submit" onsubmit="validaNome()" >Enviar Teste!</button>
+                    <div class="inputs-radius">
+                        <input id="questao-tres-a" name="questao3" type="radio" value="3"> Final de semana, óbvio! <br>
+                        <input id="questao-tres-b" name="questao3" type="radio" value="2"> f*da-se!<br>
 
-            </div>
+                    </div>
+
+                </div>
+
+                <div class="btn">
+                    <button type="submit">Enviar Teste!</button>
+
+                </div>
+        </form>
+
 
 
         </section>
-<!-- 
+        <!-- 
         <section class="card">
 
             <div>
