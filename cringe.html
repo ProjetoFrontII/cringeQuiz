@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <!-- <script src="https://kit.fontawesome.com/efec101eb5.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <!-- Icones 2 -->
+    <script src="https://kit.fontawesome.com/efec101eb5.js" crossorigin="anonymous"></script>
+
     <!-- css -->
     <link rel="stylesheet" href="./css/cringe.css">
-    <title>Cringe Quiz</title>
 
+    <title>Cringe Quizz</title>
 </head>
 
-
-
 <body>
-    <header>
 
+    <header>
         <section class="menu">
             <h2>CQ</h2>
             <ul>
@@ -31,81 +34,386 @@
             </ul>
         </section>
 
-    </header>
-
-    <main>
-
         <section class="titulo">
             <h1>CRINGEQUIZ</h1>
-            <h3>descubra se você é cringe</h3>
+            <p>descubra se você é cringe</p>
         </section>
 
-        <form action="" id="form">
-            <div class="input-nome">
-                <label for="nome">nome</label> <span id="erro"></span>
-                <input type="text" name="nome" id="nome">
+    </header>
+
+    <main class="container">
+            
+
+        <form action="#">
+
+            <!-- questão 1 -->
+            <div class="question-group">
+                <h2>O que você faz ao acordar?</h2>
+
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao1" value="3" />
+                        <!-- icone oculto, simbolo check -->
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <!-- icone central -->
+                                <i class="fas fa-coffee"></i>
+                                <!-- texto central -->
+                                <h3>Toma café da manhã</h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Segundo input -->
+
+                    <label class="custom-radio">
+                        <input type="radio" name="questao1" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="far fa-newspaper"></i>
+                                <h3>Lê/assiste o jornal</h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Terceiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao1" value="2" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-mobile"></i>
+                                <h3>Olha o celular</h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Quarto input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao1" value="1" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <!-- <i class="fas fa-user-graduate"></i> -->
+                                <!-- <i class="fas fa-school"></i> -->
+                                <i class="fas fa-chalkboard-teacher"></i>
+
+
+                                <h3>Vai pra aula</h3>
+                            </div>
+                        </span>
+                    </label>
+                </div>
             </div>
 
+            <!-- questão 2-->
 
-            <div class="questao um">
-                <p>O que você faz ao acordar?</p>
+            <div class="question-group">
+                <h2>Você conhece RBD?</h2>
 
-                <div class="inputs-radius">
-                    <input id="questao-um-a" name="questao1" type="radio" value="3"> Toma cafe?<br>
-                    <input id="questao-um-b" name="questao1" type="radio" value="2"> Vai pra aula?<br>
-                    <input id="questao-um-c" name="questao1" type="radio" value="1"> olha o celular<br>
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao2" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Segundo input -->
+
+                    <label class="custom-radio">
+                        <input type="radio" name="questao2" value="3" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-thumbs-up"></i>
+                                <h3>Sim!</h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Terceiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao2" value="2" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-thumbs-down"></i>
+                                <h3>Não</h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Quarto input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao2" value="1" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fab fa-kickstarter-k"></i>
+                                <h3>Que isso? K-pop?</h3>
+                            </div>
+                        </span>
+                    </label>
+
                 </div>
-
             </div>
 
-            <div class="questao dois">
-                <p>O que você bebe em horário comercial?</p>
+            <!-- questão 3  -->
 
-                <div class="inputs-radius">
+            <div class="question-group">
+                <h2>Qual saga de tv/cinema você prefere?</h2>
 
-                    <input id="questao-dois-a" name="questao2" type="radio" value="3"> Cafe?<br>
-                    <input id="questao-dois-b" name="questao2" type="radio" value="2"> Refrigerante?<br>
-                    <input id="questao-dois-c" name="questao2" type="radio" value="1"> Água<br>
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao3" value="2" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-user-md"></i>
+                                <h3>Grey's anatomy<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Segundo input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao3" value="1" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-capsules"></i>
+                                <h3>Euphoria<h3>
+                            </div>
+                        </span>
+                    </label>
+
+
+                    <!-- Terceiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao3" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-coffee"></i>
+                                <h3>Friends<h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Quarto input -->
+
+
+                    <label class="custom-radio">
+                        <input type="radio" name="questao3" value="3" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-hat-wizard"></i>
+                                <h3>Harry Potter<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- questão 4 -->
+
+            <div class="question-group">
+                <h2>Escolha uma plataforma...</h2>
+
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao4" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Segundo input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao4" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Terceiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao4" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Quarto input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao4" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- questão 5 -->
+
+            <div class="question-group">
+                <h2>O que você bebe em horário comercial?</h2>
+
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao5" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Segundo input -->
+
+                    <label class="custom-radio">
+                        <input type="radio" name="questao5" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Terceiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao5" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Quarto input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao5" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
 
 
                 </div>
+            </div>
 
-                <div class="questao tres">
-                    <p>Para você, o que significa “FDS”?</p>
+            <!-- questão 6  -->
 
-                    <div class="inputs-radius">
-                        <input id="questao-tres-a" name="questao3" type="radio" value="3"> Final de semana, óbvio! <br>
-                        <input id="questao-tres-b" name="questao3" type="radio" value="2"> f*da-se!<br>
+            <div class="question-group">
+                <h2>Escolha uma risada...</h2>
 
-                    </div>
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao6" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Segundo input -->
+
+                    <label class="custom-radio">
+                        <input type="radio" name="questao6" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+                    </label>
+                    <!-- Terceiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao6" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+                    <!-- Quarto input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao6" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
 
                 </div>
+            </div>
 
-                <div class="btn">
-                    <button type="submit">Enviar Teste!</button>
+            <!-- questão 7 -->
+            <div class="question-group">
+                <h2>Você pesquisou "o que é cringe" no Google?</h2>
+
+                <div class="radio-buttons">
+
+                    <!-- Primeiro input -->
+                    <label class="custom-radio">
+                        <input type="radio" name="questao7" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
+
+                    <!-- Segundo input -->
+
+                    <label class="custom-radio">
+                        <input type="radio" name="questao7" value="4" />
+                        <span class="radio-btn"><i class="las la-check"></i>
+                            <div class="question-icon">
+                                <i class="fas fa-compact-disc"></i>
+                                <h3>Tenho todos os Cds!<h3>
+                            </div>
+                        </span>
+                    </label>
 
                 </div>
+            </div>
+
         </form>
 
-
-
-        </section>
-        <!-- 
         <section class="card">
 
-            <div>
-                <img src="./img/pensebem.jpg" alt="#">
-            </div>
-       
-        </section> -->
+        </section>
+
 
     </main>
-
-    <footer>
-        Teste
-    </footer>
-
-    <script src="./javascript/cringe.js"></script>
 
 </body>
 
