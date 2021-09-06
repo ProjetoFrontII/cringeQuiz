@@ -10,11 +10,12 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: color;
   }
 
 html{
     font-size: 10px;
-    --cor-bg-laranja-escuro: #bd522bd7;
+    --cor-bg-laranja-escuro: #BD532B;
     --cor-bg-bege-intenso: #CFBE89;
     --cor-bg-bege-claro: #D6C9A1;
     --cor-bg-verde-cringe: #39AF9A;
@@ -72,6 +73,61 @@ p{
     background-color: var(--cor-bg-laranja-escuro);
     font-size: 3rem;
 }
+
+/* Fita título */
+
+
+.fita{	
+	background: var(--cor-bg-laranja-escuro);
+	position: relative;
+	margin:2rem auto;
+	width: 30rem;
+	color: var(--cor-bg-bege-claro);
+	line-height:4rem;
+  height:4rem;
+	font-size: 1rem;
+	text-align: center;
+  font-weight:700;
+  text-transform: uppercase;
+}
+.fita:before, .fita:after{
+	content: '';
+	line-height:0;
+	border-style:solid;
+	border-width: 2rem;
+	position: absolute;
+	top:1rem;
+	z-index: -2000;
+	width:0.5rem;
+}
+.fita:before{
+	border-color:  #994d31 #994d31 #994d31 transparent;
+	left:-3.5rem;
+}
+.fita:after{
+	border-color: #994d31 transparent #994d31 #994d31;
+	right: -3.5rem;
+}
+.conteudo:before, .conteudo:after{
+	position: absolute;
+	content: '';
+	height: 0;
+	line-height:0.1rem;
+	border-style:solid;
+	border-width:0.5rem;
+	z-index:-1999;
+}
+.conteudo:before{
+	border-color: #7e412b #7e412b transparent transparent;
+	bottom:-1rem;
+	left: 0;
+}
+.conteudo:after{
+	border-color: #7e412b transparent transparent #7e412b;
+	bottom:-1rem;
+	right: 0;
+}
+
 
 /* main */
 
