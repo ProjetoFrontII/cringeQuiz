@@ -48,24 +48,25 @@
     <main class="container">
 
 
-        <form id="form" class="form" method="GET">
-
+        <form id="form" class="form" method="GET" onclick="return valida_tudo();">
+<!-- ==================================================================================================================== -->
+<!--                            INPUT NOME                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="name question-group">
                 <label for="name">Nome</label>
-                <input type="text" name="name" id="nome" onblur="validar_nome();" autocomplete="off">
+                <input type="text" name="name" id="nome" autocomplete="off">
                 <span class="erro"></span>
             </div>
-
-            <!-- questão 1 -->
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 1                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>O que você faz ao acordar?</h2>
 
                 <div class="radio-buttons">
-
                     <!-- Primeiro input -->
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao1" id="alternativa_01" value="1" onclick="validar_radio1()">
+                        <input type="radio" name="questao1" id="alternativa_01" value="1" >
                         <!-- icone oculto, simbolo check -->
                         <span class="radio-btn"><i class="las la-check questao1"></i>
                             <div class="question-icon">
@@ -76,13 +77,9 @@
                             </div>
                         </span>
                     </label>
-
-
-
                     <!-- Segundo input -->
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao1" id="alternativa_02" value="2" onclick="validar_radio1()">
+                        <input type="radio" name="questao1" id="alternativa_02" value="2" >
                         <span class="radio-btn"><i class="las la-check questao1"></i>
                             <div class="question-icon">
                                 <i class="far fa-newspaper"></i>
@@ -92,7 +89,7 @@
                     </label>
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao1" id="alternativa_03" value="3" onclick="validar_radio1()">
+                        <input type="radio" name="questao1" id="alternativa_03" value="3" >
                         <span class="radio-btn"><i class="las la-check questao1"></i>
                             <div class="question-icon">
                                 <i class="fas fa-mobile"></i>
@@ -102,32 +99,29 @@
                     </label>
                     <!-- Quarto input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao1" id="alternativa_04" value="4" onclick="validar_radio1()">
+                        <input type="radio" name="questao1" id="alternativa_04" value="4" >
                         <span class="radio-btn"><i class="las la-check questao1"></i>
                             <div class="question-icon">
                                 <!-- <i class="fas fa-user-graduate"></i> -->
                                 <!-- <i class="fas fa-school"></i> -->
                                 <i class="fas fa-chalkboard-teacher"></i>
-
-
                                 <h3>Vai pra aula</h3>
                             </div>
                         </span>
                     </label>
+
                 </div>
             </div>
-
-
-            <!-- questão 2-->
-
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 2                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>Você conhece RBD?</h2>
 
                 <div class="radio-buttons">
-
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao2" id="alternativa_01" value="1" onclick="validar_radio2();">
+                        <input type="radio" name="questao2" id="alternativa_01" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -135,11 +129,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Segundo input -->
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao2" id="alternativa_02" value="2" onclick="validar_radio2();">
+                        <input type="radio" name="questao2" id="alternativa_02" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-thumbs-up"></i>
@@ -149,7 +141,7 @@
                     </label>
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao2" id="alternativa_03" value="3" onclick="validar_radio2();">
+                        <input type="radio" name="questao2" id="alternativa_03" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-thumbs-down"></i>
@@ -159,7 +151,7 @@
                     </label>
                     <!-- Quarto input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao2" id="alternativa_04" value="4" onclick="validar_radio2();">
+                        <input type="radio" name="questao2" id="alternativa_04" value="4">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fab fa-kickstarter-k"></i>
@@ -170,9 +162,9 @@
 
                 </div>
             </div>
-
-            <!-- questão 3  -->
-
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 3                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>Qual saga de tv/cinema você prefere?</h2>
 
@@ -180,7 +172,7 @@
 
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao3" id="alternativa_01" value="1" onclick="validar_radio3();">
+                        <input type="radio" name="questao3" id="alternativa_01" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-user-md"></i>
@@ -188,10 +180,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Segundo input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao3" id="alternativa_02" value="2" onclick="validar_radio3();">
+                        <input type="radio" name="questao3" id="alternativa_02" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-capsules"></i>
@@ -199,11 +190,9 @@
                             </div>
                         </span>
                     </label>
-
-
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao3" id="alternativa_03" value="3" onclick="validar_radio3();">
+                        <input type="radio" name="questao3" id="alternativa_03" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-coffee"></i>
@@ -212,10 +201,8 @@
                         </span>
                     </label>
                     <!-- Quarto input -->
-
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao3" id="alternativa_04" value="4" onclick="validar_radio3();">
+                        <input type="radio" name="questao3" id="alternativa_04" value="4">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-hat-wizard"></i>
@@ -226,9 +213,9 @@
 
                 </div>
             </div>
-
-            <!-- questão 4 -->
-
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 4                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>Escolha uma plataforma...</h2>
 
@@ -236,7 +223,7 @@
 
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao4" id="alternativa_01" value="1" onclick="validar_radio4();">
+                        <input type="radio" name="questao4" id="alternativa_01" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -246,7 +233,7 @@
                     </label>
                     <!-- Segundo input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao4" id="alternativa_02" value="2" onclick="validar_radio4();">
+                        <input type="radio" name="questao4" id="alternativa_02" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -256,7 +243,7 @@
                     </label>
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao4" id="alternativa_03" value="3" onclick="validar_radio4();">
+                        <input type="radio" name="questao4" id="alternativa_03" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -266,7 +253,7 @@
                     </label>
                     <!-- Quarto input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao4" id="alternativa_04" value="4" onclick="validar_radio4();">
+                        <input type="radio" name="questao4" id="alternativa_04" value="4">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -277,9 +264,9 @@
 
                 </div>
             </div>
-
-            <!-- questão 5 -->
-
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 5                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>O que você bebe em horário comercial?</h2>
 
@@ -287,7 +274,7 @@
 
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao5" id="alternativa_01" value="1" onclick="validar_radio5();">
+                        <input type="radio" name="questao5" id="alternativa_01" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -295,11 +282,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Segundo input -->
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao5" id="alternativa_02" value="2" onclick="validar_radio5();">
+                        <input type="radio" name="questao5" id="alternativa_02" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -307,10 +292,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao5" id="alternativa_03" value="3" onclick="validar_radio5();">
+                        <input type="radio" name="questao5" id="alternativa_03" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -318,10 +302,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Quarto input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao5" id="alternativa_04" value="4" onclick="validar_radio5();">
+                        <input type="radio" name="questao5" id="alternativa_04" value="4">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -329,13 +312,12 @@
                             </div>
                         </span>
                     </label>
-
 
                 </div>
             </div>
-
-            <!-- questão 6  -->
-
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 6                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>Escolha uma risada...</h2>
 
@@ -343,7 +325,7 @@
 
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao6" id="alternativa_01" value="1" onclick="validar_radio6();">
+                        <input type="radio" name="questao6" id="alternativa_01" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -351,11 +333,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Segundo input -->
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao6" id="alternativa_02" value="2" onclick="validar_radio6();">
+                        <input type="radio" name="questao6" id="alternativa_02" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -366,7 +346,7 @@
                     </label>
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao6" id="alternativa_03" value="3" onclick="validar_radio6();">
+                        <input type="radio" name="questao6" id="alternativa_03" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -376,7 +356,7 @@
                     </label>
                     <!-- Quarto input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao6" id="alternativa_04" value="4" onclick="validar_radio6();">
+                        <input type="radio" name="questao6" id="alternativa_04" value="4">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -387,8 +367,9 @@
 
                 </div>
             </div>
-
-            <!-- questão 7 -->
+<!-- ==================================================================================================================== -->
+<!--                            QUESTÃO 7                                                                                 -->
+<!-- ==================================================================================================================== -->
             <div class="question-group">
                 <h2>Você pesquisou "o que é cringe" no Google?</h2>
 
@@ -396,7 +377,7 @@
 
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao7" id="alternativa_01" value="1" onclick="validar_radio7();">
+                        <input type="radio" name="questao7" id="alternativa_01" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -404,11 +385,9 @@
                             </div>
                         </span>
                     </label>
-
                     <!-- Segundo input -->
-
                     <label class="custom-radio">
-                        <input type="radio" name="questao7" id="alternativa_02" value="2" onclick="validar_radio7();">
+                        <input type="radio" name="questao7" id="alternativa_02" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-compact-disc"></i>
@@ -419,7 +398,11 @@
 
                 </div>
             </div>
-            <button onclick="validar_radio();">teste</button>
+<!-- ==================================================================================================================== -->
+<!--                            BOTÃO ENVIAR                                                                              -->
+<!-- ==================================================================================================================== -->
+<button type="submit" id="botaoEnviar" name="botaoEnviar" disabled="disabled">Enviar</button>
+
         </form>
 
         <section class="card">

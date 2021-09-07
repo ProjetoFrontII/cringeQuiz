@@ -27,7 +27,7 @@ function validar_nome() {
     var valida_nome = nome.match(padrao);
     if (valida_nome || !nome) {
         console.log("Nome possui caracteres inválidos ou é vazio.");
-        document.form.nome.focus();
+        // document.form.nome.focus();
         return false;
     } else {
         console.log("Nome Ok!");
@@ -35,155 +35,163 @@ function validar_nome() {
     }
 }
 
-
-
-
 // =================================================================================
 //                          VALIDAR RADIO
 // =================================================================================
-var resposta = {};
-var q1 = document.getElementsByName('questao1'); 
-var q2 = document.getElementsByName('questao2');
-var q3 = document.getElementsByName('questao3');
-var q4 = document.getElementsByName('questao4');
-var q5 = document.getElementsByName('questao5');
-var q6 = document.getElementsByName('questao6');
-var q7 = document.getElementsByName('questao7');
-
-function validar_radio1(){
-
-    var radio = document. getElementsByName("questao1");
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-
-            console.log("radio q1 "+radio[i].value)
-        } else{
-            console.log("q1 vazio")
+var q1 = 0;
+var q2 = 0;
+var q3 = 0;
+var q4 = 0;
+var q5 = 0;
+var q6 = 0;
+var q7 = 0;
+// VERIFICAÇÃO DA QUESTÃO 1
+function validar_radio1() {
+    var radio = document.getElementsByName("questao1");
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q1 " + radio[i].value);
+            q1 = radio[i].value;
+            console.log(q1)
+            return true;
+        } else {
+            // return false;
         }
     }
 }
-
-function validar_radio2(){
-    var radio = document. getElementsByName("questao2");
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-            console.log("radio q2"+radio[i].value)
-        } else{
-            console.log("q2 vazio")
+// VERIFICAÇÃO DA QUESTÃO 2
+function validar_radio2() {
+    var radio = document.getElementsByName("questao2");
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q2 " + radio[i].value);
+            q2 = radio[i].value;
+            console.log(q2)
+            return true;
+        } else {
+            // return false;
         }
     }
 }
-
-
-function validar_radio3(){
-    var radio = document. getElementsByName("questao3");
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-            console.log("radio q3 "+radio[i].value)
-        } else{
-            console.log("q3 vazio")
+// VERIFICAÇÃO DA QUESTÃO 3
+function validar_radio3() {
+    var radio = document.getElementsByName("questao3");
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q3 " + radio[i].value);
+            q3 = radio[i].value;
+            console.log(q3)
+            return true;
+        } else {
+            // return false;
         }
     }
 }
-
-
-function validar_radio4(){
-    var radio = document. getElementsByName("questao4");
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-            console.log("radio q4"+radio[i].value)
-        } else{
-            console.log("q4 vazio")
+// VERIFICAÇÃO DA QUESTÃO 4
+function validar_radio4() {
+    var radio = document.getElementsByName("questao4");
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q4 " + radio[i].value);
+            q4 = radio[i].value;
+            console.log(q4)
+            return true;
+        } else {
+            // return false;
         }
     }
 }
-
-
-function validar_radio5(){
-    var radio = document. getElementsByName("questao5");
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-            console.log("radio q5 "+radio[i].value)
-        } else{
-            console.log("vazio q5")
+// VERIFICAÇÃO DA QUESTÃO 5
+function validar_radio5() {
+    var radio = document.getElementsByName("questao5");
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q5 " + radio[i].value);
+            q5 = radio[i].value;
+            console.log(q5)
+            return true;
+        } else {
+            // return false;
         }
     }
 }
-
-function validar_radio6(){
-    var radio = document. getElementsByName("questao6");
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-            console.log("radio q6"+radio[i].value)
-        } else{
-            console.log("vazio q6")
+// VERIFICAÇÃO DA QUESTÃO 6
+function validar_radio6() {
+    var radio = document.getElementsByName("questao6");
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q6 " + radio[i].value);
+            q6 = radio[i].value;
+            console.log(q6)
+            return true;
+        } else {
+            // return false;
         }
     }
 }
-
-
-function validar_radio7(){
-    var radio = document. getElementsByName("questao7");
+// VERIFICAÇÃO DA QUESTÃO 7
+function validar_radio7() {
+    var radio = document.getElementsByName("questao7");
     var contagem7 = 0
-    for (i=0; i<radio.length;i++){
-        if(radio[i].checked){
-
-            console.log("radio q7"+radio[i].value)
-        } else{
-            console.log("vazio q7")
+    for (i = 0; i < radio.length; i++) {
+        if (radio[i].checked) {
+            console.log("radio q7 " + radio[i].value);
+            q7 = radio[i].value;
+            console.log(q7)
+            return true;
+        } else {
+            // return false;
         }
     }
-
-    
-
-
 }
 
+// =================================================================================
+//                     VERIFICAÇÃO DE TODOS OS CAMPOS
+// =================================================================================
+function valida_tudo() {
+    if (
+        (validar_nome() == true) 
+        && (validar_radio1() == true)
+        && (validar_radio2() == true)
+        && (validar_radio3() == true)
+        && (validar_radio4() == true)
+        && (validar_radio5() == true)
+        && (validar_radio6() == true)
+        && (validar_radio7() == true)
+    ) {
+        /*      // OPÇÃO CRIANDO O BOTÃO NO JS
+                // Criação do "Botão enviar" quando todas as verificações forem 'true'
+                var botaoEnviar = document.createElement("button");
+                var botaoTextoEnviar = document.createTextNode("ENVIAR");
+                botaoEnviar.setAttribute("type", "submit");
+                botaoEnviar.appendChild(botaoTextoEnviar);
+                form.appendChild(botaoEnviar);
+                // Formatando o botão
+                botaoEnviar.style.display = "flex";
+                botaoEnviar.style.flexDirection = "column";
+                botaoEnviar.style.border = "var(--cor-bg-verde-cringe)";
+                botaoEnviar.style.color = "var(--cor-bg-laranja-escuro)";
+                botaoEnviar.style.width = "12rem";
+                botaoEnviar.style.height = "5rem";
+                botaoEnviar.style.borderRadius = "1rem";
+                botaoEnviar.style.textAlign = "center";
+        */
 
+        // CONTAGEM DOS PONTOS
+        var soma = parseInt(q1)
+            + parseInt(q2)
+            + parseInt(q3)
+            + parseInt(q4)
+            + parseInt(q5)
+            + parseInt(q6)
+            + parseInt(q7)
+        console.log("O valor de todas as questões: " + soma)
 
-function resposta(q_num, event){
-    if(event.target.type === 'radio'){
-        console.log(event.target.value);
-        resposta['questão '+q_num]=parseInt(event.target.value);
-        console.log(resposta)
+        // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO Q ESTÁ NO HTML
+        document.getElementById("botaoEnviar").disabled = false;
+    } else {
+        document.getElementById("botaoEnviar").disabled = true;
+
     }
+
 }
-
-/*
-
-q2.addEventListener('click',function(event){
-    resposta(2,event)
-})
-
-q3.addEventListener('click',function(event){
-    resposta(3,event)
-})
-
-q4.addEventListener('click',function(event){
-    resposta(4,event)
-})
-
-q5.addEventListener('click',function(event){
-    resposta(5,event)
-})
-
-q6.addEventListener('click',function(event){
-    resposta(6,event)
-})
-
-q7.addEventListener('click',function(event){
-    resposta(7,event)
-})
-
-function total(){
-    var questao_total =
-    resposta.q1+
-    resposta.q2+
-    resposta.q3+
-    resposta.q4+
-    resposta.q5+
-    resposta.q6+
-    resposta.q7;
-
-    return questao_total;
-}*/
