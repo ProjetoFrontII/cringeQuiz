@@ -38,6 +38,7 @@ function validar_nome() {
 // =================================================================================
 //                          VALIDAR RADIO
 // =================================================================================
+// ATRIBUIÇÃO DOS VALORES DE CADA QUESTÃO INICIALMENTE. SEM ALTERNATIVA CHECKED
 var q1 = 0;
 var q2 = 0;
 var q3 = 0;
@@ -45,6 +46,7 @@ var q4 = 0;
 var q5 = 0;
 var q6 = 0;
 var q7 = 0;
+
 // VERIFICAÇÃO DA QUESTÃO 1
 function validar_radio1() {
     var radio = document.getElementsByName("questao1");
@@ -159,24 +161,24 @@ function valida_tudo() {
         && (validar_radio6() == true)
         && (validar_radio7() == true)
     ) {
-        /*      // OPÇÃO CRIANDO O BOTÃO NO JS
+              // OPÇÃO CRIANDO O BOTÃO NO JS
                 // Criação do "Botão enviar" quando todas as verificações forem 'true'
-                var botaoEnviar = document.createElement("button");
-                var botaoTextoEnviar = document.createTextNode("ENVIAR");
-                botaoEnviar.setAttribute("type", "submit");
-                botaoEnviar.appendChild(botaoTextoEnviar);
-                form.appendChild(botaoEnviar);
+                // var botaoEnviar = document.createElement("button");
+                // var botaoTextoEnviar = document.createTextNode("ENVIAR");
+                // botaoEnviar.setAttribute("type", "button");
+                // botaoEnviar.appendChild(botaoTextoEnviar);
+                // form.appendChild(botaoEnviar);
+                
                 // Formatando o botão
-                botaoEnviar.style.display = "flex";
-                botaoEnviar.style.flexDirection = "column";
-                botaoEnviar.style.border = "var(--cor-bg-verde-cringe)";
-                botaoEnviar.style.color = "var(--cor-bg-laranja-escuro)";
-                botaoEnviar.style.width = "12rem";
-                botaoEnviar.style.height = "5rem";
-                botaoEnviar.style.borderRadius = "1rem";
-                botaoEnviar.style.textAlign = "center";
-        */
-
+                // botaoEnviar.style.display = "flex";
+                // botaoEnviar.style.flexDirection = "column";
+                // botaoEnviar.style.border = "var(--cor-bg-verde-cringe)";
+                // botaoEnviar.style.color = "var(--cor-bg-laranja-escuro)";
+                // botaoEnviar.style.width = "12rem";
+                // botaoEnviar.style.height = "5rem";
+                // botaoEnviar.style.borderRadius = "1rem";
+                // botaoEnviar.style.textAlign = "center";
+        
         // CONTAGEM DOS PONTOS
         var soma = parseInt(q1)
             + parseInt(q2)
@@ -189,9 +191,34 @@ function valida_tudo() {
 
         // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO Q ESTÁ NO HTML
         document.getElementById("botaoEnviar").disabled = false;
+        
     } else {
         document.getElementById("botaoEnviar").disabled = true;
 
     }
+
+}
+
+function submitJSON(){
+    console.log("envia json")
+
+    // BUSCA AS INFOS DE DADOS
+    let storage = JSON.parse(localStorage.getItem("dados"));
+
+    // CONFERE SE O ARRAY ESTÁ VAZIO, SE SIM, ATRIBUI UM CONJUNTO VAZIO PARA 'DADOS'
+    if (storage == null) {
+        localStorage.setItem("dados", "[]")
+        storage = [];
+    }
+
+    // CONFERE QUAIS CHECKBOX ESTÃO SELECIONADAS
+    let escolha = document.getElementsByName('');
+    let escolhaChecked = []
+    for (i = 0; i < escolha.length; ++i) {
+        if (escolha[i].checked) {
+            escolhaChecked.push(escolha[i].value)
+        }
+    }
+
 
 }
