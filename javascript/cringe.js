@@ -7,13 +7,12 @@ var q5 = 0;
 var q6 = 0;
 var q7 = 0;
 
-// Declaração global da string que soma o valor de cada questão
+// DECLARAÇÃO GLOBAL DA STRING QUE SOMA O VALOR DE CADA QUESTÃO
 var soma
 
 // =================================================================================
 //                          SOMA DA PONTUAÇÃO
 // =================================================================================
-// Função que soma a pontuação de cada questão
 function somar() {
     // CONTAGEM DOS PONTOS
     soma = parseInt(q1)
@@ -31,7 +30,7 @@ function somar() {
 // =================================================================================
 function validar_nome() {
     var nome = document.getElementById("nome").value;
-    // RegEX que acceita espaço entre palavras
+    // RegEX QUE ACEITA APENAS LETRAS E UMA PALAVRA
     var padrao = /[^a-zà-ú]/gi;
     var valida_nome = nome.match(padrao);
     if (valida_nome || !nome) {
@@ -173,7 +172,7 @@ function valida_tudo() {
 
         // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO Q ESTÁ NO HTML
         document.getElementById("botaoEnviar").disabled = false;
-        // Chama a função que soma os pontos de cada questão
+        // CHAMA A FUNÇÃO QUE SOMA OS PONTOS DE CADA QUESTÃO
         return somar()
     } else {
         document.getElementById("botaoEnviar").disabled = true;
