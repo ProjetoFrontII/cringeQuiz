@@ -183,25 +183,25 @@ function somar() {
 //                     RESULTADO DO QUIZ
 // =================================================================================
 
-var imagem = ["imagem/", "imagem/", "imagem/", "imagem/"];
-var mensagem = ["", "", "", ""];
+var imagem = ["imagem/apuros.jpeg", "imagem/explorador.jpg", "imagem/epico.png", "imagem/lendario.png"];
+var mensagem = ["Em apuros", "Explorador", "Épico", "Lendário"];
 var score;
 
 function card(){
     // CONDIÇÕES PARA ATRIBUIR O INTERVALO CRINGE DO USUÁRIO
-    if (soma ){
+    if ((soma >= 7) && (soma <= 10)){
         score = 0;
     }
     
-    if (soma ){
+    if ((soma >= 11) && (soma <= 14)){
         score = 1;
     }
     
-    if (soma ){
+    if ((soma >= 15) && (soma <= 19)){
         score = 2;
     }
     
-    if (soma ){
+    if ((soma >= 20) && (soma <= 28)){
         score = 3;
     }
     
