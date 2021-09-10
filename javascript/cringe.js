@@ -45,17 +45,6 @@ function validar_nome() {
 // =================================================================================
 //                          VALIDAR RADIO
 // =================================================================================
-<<<<<<< HEAD
-var q1 = 0;
-var q2 = 0;
-var q3 = 0;
-var q4 = 0;
-var q5 = 0;
-var q6 = 0;
-var q7 = 0;
-=======
-
->>>>>>> 32b40904de4b6bb1603b978e995981903a0568ff
 // VERIFICAÇÃO DA QUESTÃO 1
 function validar_radio1() {
     var radio = document.getElementsByName("questao1");
@@ -139,7 +128,8 @@ function validar_radio7() {
     var radio = document.getElementsByName("questao7");
     var contagem7 = 0
     for (i = 0; i < radio.length; i++) {
-        if (radio[i].checked) {q7 = radio[i].value;
+        if (radio[i].checked) {
+            q7 = radio[i].value;
             console.log("radio q7 " + radio[i].value);
             return true;
         } else {
@@ -162,35 +152,6 @@ function valida_tudo() {
         && (validar_radio6() == true)
         && (validar_radio7() == true)
     ) {
-<<<<<<< HEAD
-        /*      // OPÇÃO CRIANDO O BOTÃO NO JS
-                // Criação do "Botão enviar" quando todas as verificações forem 'true'
-                var botaoEnviar = document.createElement("button");
-                var botaoTextoEnviar = document.createTextNode("ENVIAR");
-                botaoEnviar.setAttribute("type", "submit");
-                botaoEnviar.appendChild(botaoTextoEnviar);
-                form.appendChild(botaoEnviar);
-                // Formatando o botão
-                botaoEnviar.style.display = "flex";
-                botaoEnviar.style.flexDirection = "column";
-                botaoEnviar.style.border = "var(--cor-bg-verde-cringe)";
-                botaoEnviar.style.color = "var(--cor-bg-laranja-escuro)";
-                botaoEnviar.style.width = "12rem";
-                botaoEnviar.style.height = "5rem";
-                botaoEnviar.style.borderRadius = "1rem";
-                botaoEnviar.style.textAlign = "center";
-        */
-
-        // CONTAGEM DOS PONTOS
-        var soma = parseInt(q1)
-            + parseInt(q2)
-            + parseInt(q3)
-            + parseInt(q4)
-            + parseInt(q5)
-            + parseInt(q6)
-            + parseInt(q7)
-        console.log("O valor de todas as questões: " + soma)
-=======
         // OPÇÃO CRIANDO O BOTÃO NO JS
         // Criação do "Botão enviar" quando todas as verificações forem 'true'
         // var botaoEnviar = document.createElement("button");
@@ -208,7 +169,7 @@ function valida_tudo() {
         // botaoEnviar.style.height = "5rem";
         // botaoEnviar.style.borderRadius = "1rem";
         // botaoEnviar.style.textAlign = "center";  
->>>>>>> 32b40904de4b6bb1603b978e995981903a0568ff
+
 
         // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO Q ESTÁ NO HTML
         document.getElementById("botaoEnviar").disabled = false;
@@ -217,11 +178,8 @@ function valida_tudo() {
     } else {
         document.getElementById("botaoEnviar").disabled = true;
     }
-<<<<<<< HEAD
+}
 
-}
-=======
-}
 
 // =================================================================================
 //                     CRIAÇÃO DO JSON
@@ -264,4 +222,4 @@ function recuperaDados() {
         console.log(`Pontos ${i + 1}: ${dadosRecuperados[i].pontos}`)
     }
 };
->>>>>>> 32b40904de4b6bb1603b978e995981903a0568ff
+
