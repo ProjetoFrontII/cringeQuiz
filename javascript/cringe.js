@@ -1,30 +1,3 @@
-// ATRIBUIÇÃO DOS VALORES DE CADA QUESTÃO INICIALMENTE. SEM ALTERNATIVA CHECKED
-var q1 = 0;
-var q2 = 0;
-var q3 = 0;
-var q4 = 0;
-var q5 = 0;
-var q6 = 0;
-var q7 = 0;
-
-// DECLARAÇÃO GLOBAL DA STRING QUE SOMA O VALOR DE CADA QUESTÃO
-var soma
-
-// =================================================================================
-//                          SOMA DA PONTUAÇÃO
-// =================================================================================
-function somar() {
-    // CONTAGEM DOS PONTOS
-    soma = parseInt(q1)
-        + parseInt(q2)
-        + parseInt(q3)
-        + parseInt(q4)
-        + parseInt(q5)
-        + parseInt(q6)
-        + parseInt(q7)
-    console.log("O valor de todas as questões: " + soma)
-}
-
 // =================================================================================
 //                          VALIDAR NOME
 // =================================================================================
@@ -171,7 +144,7 @@ function valida_tudo() {
         // botaoEnviar.style.textAlign = "center";  
 
 
-        // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO Q ESTÁ NO HTML
+        // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO QUE ESTÁ NO HTML
         document.getElementById("botaoEnviar").disabled = false;
         // CHAMA A FUNÇÃO QUE SOMA OS PONTOS DE CADA QUESTÃO
         return somar()
@@ -180,14 +153,77 @@ function valida_tudo() {
     }
 }
 
+// =================================================================================
+//                          SOMA DA PONTUAÇÃO
+// =================================================================================
+// ATRIBUIÇÃO DOS VALORES DE CADA QUESTÃO INICIALMENTE. SEM ALTERNATIVA CHECKED
+var q1 = 0;
+var q2 = 0;
+var q3 = 0;
+var q4 = 0;
+var q5 = 0;
+var q6 = 0;
+var q7 = 0;
+
+// DECLARAÇÃO GLOBAL DA STRING QUE SOMA O VALOR DE CADA QUESTÃO
+var soma
+
+function somar() {
+    // CONTAGEM DOS PONTOS
+    soma = parseInt(q1)
+        + parseInt(q2)
+        + parseInt(q3)
+        + parseInt(q4)
+        + parseInt(q5)
+        + parseInt(q6)
+        + parseInt(q7)
+    console.log("O valor de todas as questões: " + soma)
+}
+// =================================================================================
+//                     RESULTADO DO QUIZ
+// =================================================================================
+
+var imagem = ["imagem/", "imagem/", "imagem/", "imagem/"];
+var mensagem = ["", "", "", ""];
+var score;
+
+function card(){
+    // CONDIÇÕES PARA ATRIBUIR O INTERVALO CRINGE DO USUÁRIO
+    if (soma ){
+        score = 0;
+    }
+    
+    if (soma ){
+        score = 1;
+    }
+    
+    if (soma ){
+        score = 2;
+    }
+    
+    if (soma ){
+        score = 3;
+    }
+    
+    // CRIAÇÃO DO CARD
+    document.getElementById("depois_submit").style.visibility = "visible";
+    
+    document.getElementById("mensagem").innerHTML = mensagem[score];
+    document.getElementById("resultado_soma").innerHTML = "Você consquitou um valor " + soma + " do nível cringe.";
+    document.getElementById("imagem").src = imagem[score];
+
+    // CHAMA A FUNÇÃO QUE GERA O JSON
+    return submitJSON()
+}
+
 
 // =================================================================================
 //                     CRIAÇÃO DO JSON
 // =================================================================================
 function submitJSON() {
-    console.log("===================================")
-    console.log("==  ==   REGISTRO JSON    ==  ==  ")
-    console.log("===================================")
+    console.log("================================")
+    console.log("==  ==   REGISTRO JSON    ==  ==")
+    console.log("================================")
 
     // BUSCA AS INFOS DE DADOS
     let storage = JSON.parse(localStorage.getItem("dados"));
@@ -202,6 +238,8 @@ function submitJSON() {
     let dadosForm = {
         nome: document.querySelector('#nome').value,
         pontos: soma,
+        mensagem: mensagem[score],
+        imagem_card: imagem[score]
     }
 
     // ARMAZENA AS INFORMAÇÕES DE 'DADOS' NO OBJETO
@@ -220,6 +258,8 @@ function recuperaDados() {
     for (let i = 0; i < dadosRecuperados.length; i++) {
         console.log(`Nome da pessoa ${i + 1}: ${dadosRecuperados[i].nome}`)
         console.log(`Pontos ${i + 1}: ${dadosRecuperados[i].pontos}`)
+        console.log(`Mensagem ${i + 1}: ${dadosRecuperados[i].mensagem}`)
+        console.log(`Imagem_card ${i + 1}: ${dadosRecuperados[i].imagem_card}`)
     }
 };
 
