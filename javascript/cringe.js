@@ -8,6 +8,7 @@ function validar_nome() {
     var valida_nome = nome.match(padrao);
     if (valida_nome || !nome) {
         console.log("Nome possui caracteres inválidos ou é vazio.");
+    
         return false;
     } else {
         console.log("Nome Ok!");

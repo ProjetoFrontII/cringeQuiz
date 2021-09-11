@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <!-- Icones 2 -->
     <script src="https://kit.fontawesome.com/efec101eb5.js" crossorigin="anonymous"></script>
@@ -53,18 +54,18 @@
             <!--                            INPUT NOME                                                                                 -->
             <!-- ==================================================================================================================== -->
             <div class="nome">
-                <div><label for="name">Nome</label></div>                
-                <input type="text" name="name" id="nome" autocomplete="off">
+                <div><label for="name">Nome do Jogador:</label></div>
+                <input type="text" name="name" id="nome" autocomplete="off" placeholder="Digite seu nome">
                 <span class="erro"></span>
             </div>
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 1                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group" id="questao01">
                 <h2>O que você faz ao acordar?</h2>
 
                 <div class="radio-buttons">
-                    <!-- Primeiro input -->
+                    <!-- Primeiro input -->                    
                     <label class="custom-radio">
                         <input type="radio" name="questao1" id="alternativa_01" class="radioQuestao" value="3">
                         <!-- icone oculto, simbolo check -->
@@ -115,7 +116,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 2                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group" id="questao02">
                 <h2>Você conhece RBD?</h2>
 
                 <div class="radio-buttons">
@@ -165,7 +166,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 3                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group" id="questao03">
                 <h2>Qual saga de tv/cinema você prefere?</h2>
 
                 <div class="radio-buttons">
@@ -216,7 +217,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 4                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group"id="questao04">
                 <h2>Escolha uma plataforma...</h2>
 
                 <div class="radio-buttons">
@@ -267,7 +268,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 5                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group" id="questao05">
                 <h2>O que você bebe em horário comercial?</h2>
 
                 <div class="radio-buttons">
@@ -318,7 +319,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 6                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group" id="questao06">
                 <h2>Escolha uma risada...</h2>
 
                 <div class="radio-buttons">
@@ -370,7 +371,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 7                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group">
+            <div class="question-group" id="questao07">
                 <h2>Você pesquisou "o que é cringe" no Google?</h2>
 
                 <div class="radio-buttons">
@@ -402,8 +403,13 @@
             <!--                            BOTÃO ENVIAR                                                                              -->
             <!-- ==================================================================================================================== -->
             <!-- <button type="button" id="botaoEnviar" name="botaoEnviar" disabled="disabled" onclick="submitJSON()">Enviar</button> -->
-            <button type="button" id="botaoEnviar" name="botaoEnviar" disabled="disabled" onclick="card()">Enviar</button>
-            <button type="reset" id="reset" name="reset">Refazer</button>
+            <div class="btn-group">
+                <button class="btn" type="button" id="botaoEnviar" name="botaoEnviar" disabled="disabled"
+                    onclick="card()">Enviar Teste</button>
+                <button class="btn reset" type="reset" id="reset" name="reset">Refazer Teste</button>
+            </div>
+
+
         </form>
 
         <!-- ==================================================================================================================== -->
@@ -418,7 +424,17 @@
         </section>
 
 
+
+
     </main>
+    <footer>
+        <h2>CQ</h2>  
+        <div class="redes">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>      
+    </footer>
     <script src="javascript/cringe.js"></script>
 </body>
 

@@ -15,7 +15,8 @@ body {
 }
 
 html{
-  font-size: 5px;
+  font-size: 10px;
+  scroll-behavior: smooth;
   --cor-bg-laranja-escuro: #BD532B;
   --cor-bg-bege-intenso: #CFBE89;
   --cor-bg-bege-claro: #D6C9A1;
@@ -52,7 +53,7 @@ ul{
 li{
   padding: 1rem;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 
@@ -142,6 +143,14 @@ right: 0;
  
 }
 
+form{
+   
+  width: 60rem;
+
+}
+
+/*Input Nome*/
+
 .nome{
 color: var(--cor-bg-verde-cringe);
 font-size: 2.5rem;
@@ -155,16 +164,13 @@ outline: none;
 background-color: var(--cor-bg-laranja-escuro);
 opacity: 0.8;
 border: none;
-color: var(--cor-bg-bege-claro);
-
+color: var(--cor-bg-bege-intenso);
+width: 30rem;
+height: 3rem;
+font-size: 2rem;
 }
 
 
-
-form{
-   
-  width: 60rem;
-}
 .question-group{
   margin: 3rem 0;
   display:flex;
@@ -204,6 +210,10 @@ form{
   box-shadow: 0 0 1rem #c3c3c367;
   cursor: pointer;
   background-color: var(--cor-bg-bege-claro)
+}
+
+.radio-btn:hover{
+  border: solid 1px var(--cor-bg-laranja-escuro)
 }
 
 .radio-btn > i {
@@ -257,3 +267,67 @@ form{
   transform: translateX(-50%) scale(1);
 }
 
+/*Botão*/
+
+.btn-group{
+display: flex;
+justify-content: center;
+
+}
+
+.btn {
+  height: 3rem;
+  width: 20rem;
+  font-size: 2rem;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+
+  
+}
+
+btn{
+border: solid 1px var(--cor-bg-laranja-escuro);
+color: var(--cor-bg-laranja-escuro);
+}
+
+/*Card*/
+.card{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 50rem;
+  height: 40rem;  
+  margin-top: 1rem;
+  font-size: 1rem;
+  
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--cor-bg-laranja-escuro);
+  color: var(--cor-bg-bege-claro);
+      
+}
+
+footer h2{
+  font-family: 'Monoton', cursive;
+  font-size: 3rem;
+}
+
+.redes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.redes i{
+font-size: 2rem;
+margin: 0 1rem;
+cursor: pointer;
+}
