@@ -8,7 +8,8 @@ function validar_nome() {
     var valida_nome = nome.match(padrao);
     if (valida_nome || !nome) {
         console.log("Nome possui caracteres inválidos ou é vazio.");
-    
+
+
         return false;
     } else {
         console.log("Nome Ok!");
@@ -184,7 +185,7 @@ function somar() {
 //                     RESULTADO DO QUIZ
 // =================================================================================
 
-var imagem = ["imagem/apuros.jpeg", "imagem/explorador.jpg", "imagem/epico.png", "imagem/lendario.png"];
+var imagem = ["imagem/emApuros.png", "imagem/explorador.png", "imagem/epico.png", "imagem/lendario.png"];
 var mensagem = ["Em apuros", "Explorador", "Épico", "Lendário"];
 var score;
 

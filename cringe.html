@@ -55,7 +55,7 @@
             <!-- ==================================================================================================================== -->
             <div class="nome">
                 <div><label for="name">Nome do Jogador:</label></div>
-                <input type="text" name="name" id="nome" autocomplete="off" placeholder="Digite seu nome">
+                <input type="text" name="name" id="nome" autocomplete="off" placeholder="Digite seu nome" required>
                 <span class="erro"></span>
             </div>
             <!-- ==================================================================================================================== -->
@@ -65,7 +65,7 @@
                 <h2>O que você faz ao acordar?</h2>
 
                 <div class="radio-buttons">
-                    <!-- Primeiro input -->                    
+                    <!-- Primeiro input -->
                     <label class="custom-radio">
                         <input type="radio" name="questao1" id="alternativa_01" class="radioQuestao" value="3">
                         <!-- icone oculto, simbolo check -->
@@ -132,7 +132,7 @@
                     </label>
                     <!-- Segundo input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao2" id="alternativa_02" class="radioQuestao" value="3">
+                        <input type="radio" name="questao2" id="alternativa_02" class="radioQuestao" value="2">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-thumbs-up"></i>
@@ -142,7 +142,7 @@
                     </label>
                     <!-- Terceiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao2" id="alternativa_03" class="radioQuestao" value="2">
+                        <input type="radio" name="questao2" id="alternativa_03" class="radioQuestao" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-thumbs-down"></i>
@@ -183,7 +183,7 @@
                     </label>
                     <!-- Segundo input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao3" id="alternativa_02" class="radioQuestao" value="2">
+                        <input type="radio" name="questao3" id="alternativa_02" class="radioQuestao" value="1">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="fas fa-capsules"></i>
@@ -217,7 +217,7 @@
             <!-- ==================================================================================================================== -->
             <!--                            QUESTÃO 4                                                                                 -->
             <!-- ==================================================================================================================== -->
-            <div class="question-group"id="questao04">
+            <div class="question-group" id="questao04">
                 <h2>Escolha uma plataforma...</h2>
 
                 <div class="radio-buttons">
@@ -326,7 +326,7 @@
 
                     <!-- Primeiro input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao6" id="alternativa_01" class="radioQuestao" value="4">
+                        <input type="radio" name="questao6" id="alternativa_01" class="radioQuestao" value="3">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="far fa-grin-squint"></i>
@@ -336,11 +336,11 @@
                     </label>
                     <!-- Segundo input -->
                     <label class="custom-radio">
-                        <input type="radio" name="questao6" id="alternativa_02" class="radioQuestao" value="3">
+                        <input type="radio" name="questao6" id="alternativa_02" class="radioQuestao" value="4">
                         <span class="radio-btn"><i class="las la-check"></i>
                             <div class="question-icon">
                                 <i class="far fa-laugh-beam"></i>
-                                <h3>rs<h3>
+                                <h3>Risos/rs<h3>
                             </div>
                         </span>
                     </label>
@@ -406,12 +406,9 @@
             <div class="btn-group">
                 <button class="btn" type="button" id="botaoEnviar" name="botaoEnviar" disabled="disabled"
                     onclick="card()">Enviar Teste</button>
-                <button class="btn reset" type="reset" id="reset" name="reset">Refazer Teste</button>
+                <button class="btn reset" type="reset" id="reset" name="reset">Resetar Teste</button>
             </div>
-
-
         </form>
-
         <!-- ==================================================================================================================== -->
         <!--                            CARD                                                                              -->
         <!-- ==================================================================================================================== -->
@@ -422,18 +419,14 @@
                 <img id="imagem">
             </div>
         </section>
-
-
-
-
     </main>
     <footer>
-        <h2>CQ</h2>  
+        <h2>CQ</h2>
         <div class="redes">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-twitter"></i>
-        </div>      
+        </div>
     </footer>
     <script src="javascript/cringe.js"></script>
 </body>

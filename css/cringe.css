@@ -15,7 +15,7 @@ body {
 }
 
 html{
-  font-size: 10px;
+  font-size: 5px;
   scroll-behavior: smooth;
   --cor-bg-laranja-escuro: #BD532B;
   --cor-bg-bege-intenso: #CFBE89;
@@ -297,11 +297,20 @@ color: var(--cor-bg-laranja-escuro);
   text-align: center;
   display: flex;
   justify-content: center;
-  width: 50rem;
-  height: 40rem;  
+  width: 60rem;
   margin-top: 1rem;
   font-size: 1rem;
   
+}
+
+.card p{
+  width: 50rem;
+  font-size: 2rem;
+}
+
+img{  
+  width: 50rem;
+  height: 40rem;
 }
 
 footer{
