@@ -300,6 +300,7 @@ color: var(--cor-bg-laranja-escuro);
   width: 60rem;
   margin-top: 1rem;
   font-size: 1rem;
+  line-height: 2.5rem;
   
 }
 
@@ -339,4 +340,18 @@ footer h2{
 font-size: 2rem;
 margin: 0 1rem;
 cursor: pointer;
+}
+
+@media (min-width: 500px){
+ 
+  html{
+    font-size: 7px ;
+  }
+}
+
+@media (min-width: 800px){
+ 
+  html{
+    font-size: 10px ;
+  }
 }

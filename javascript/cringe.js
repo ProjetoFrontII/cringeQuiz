@@ -1,8 +1,10 @@
 // =================================================================================
 //                          VALIDAR NOME
 // =================================================================================
+var nome; 
+
 function validar_nome() {
-    var nome = document.getElementById("nome").value;
+    nome = document.getElementById("nome").value;
     // RegEX QUE ACEITA APENAS LETRAS E UMA PALAVRA
     var padrao = /[^a-zà-ú]/gi;
     var valida_nome = nome.match(padrao);
@@ -186,7 +188,12 @@ function somar() {
 // =================================================================================
 
 var imagem = ["imagem/emApuros.png", "imagem/explorador.png", "imagem/epico.png", "imagem/lendario.png"];
-var mensagem = ["Em apuros", "Explorador", "Épico", "Lendário"];
+
+var mensagem = [
+"Você é Cringe Em Apuros: Você não é nada cringe, talvez seja o oposto! Você sabe o que significa based e quem é a Olivia Rodrigo. Você julga os adultos e sabe todas as danças do TikoTeko e reclama que ninguém te entende ou leva a sério! Jovem, não se preocupe o tempo chega e com ele a depre… O cringe.", 
+"Você é Cringe Explorador: Você tem altos e baixos sendo cringe. Tem consciência de alguns momentos e outro não. Você mostra um talento natural para ser cringe, mas as vezes escolhe não ser, esperamos que você possa mudar isso brevemente.",
+"Você é Cringe Épico: Você é bastante cringe as pessoas ao seu redor gostariam de esconder a cabeça de vergonha, mas não a todo momento. Você ainda não está iniciado totalmente ao caminho cringe, mas está na direção… Eu sei você já viu Friends na Netflix.",
+"Você é Cringe Lendário: Você é tão cringe que a linha para virar aquele parente das piadas sem graça é muito próxima. Você não entende os jovens e acaba sendo julgando por fazer as coisas e causar vergonha nos outros, infelizmente não há salvação para ti a não ser abraçar o cringe."];
 var score;
 
 function card(){
@@ -211,7 +218,7 @@ function card(){
     document.getElementById("depois_submit").style.visibility = "visible";
     
     document.getElementById("mensagem").innerHTML = mensagem[score];
-    document.getElementById("resultado_soma").innerHTML = "Você consquitou um valor " + soma + " do nível cringe.";
+    document.getElementById("resultado_soma").innerHTML = nome + "!";
     document.getElementById("imagem").src = imagem[score];
 
     // CHAMA A FUNÇÃO QUE GERA O JSON
@@ -264,4 +271,5 @@ function recuperaDados() {
         console.log(`Imagem_card ${i + 1}: ${dadosRecuperados[i].imagem_card}`)
     }
 };
+
 
