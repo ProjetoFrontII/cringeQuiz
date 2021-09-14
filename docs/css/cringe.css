@@ -275,6 +275,14 @@ justify-content: center;
 
 }
 
+.botaoAtivado
+{
+  background-color: var(--cor-bg-laranja-escuro);
+  color: var(--cor-bg-bege-claro);
+}
+
+
+
 .btn {
   height: 3rem;
   width: 20rem;
@@ -283,7 +291,6 @@ justify-content: center;
   border: none;
   cursor: pointer;
   border-radius: 0.5rem;
-
   
 }
 

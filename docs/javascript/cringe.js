@@ -149,7 +149,9 @@ function valida_tudo() {
 
 
         // OUTRA OPÇÃO APENAS HABILITANDO O BOTÃO QUE ESTÁ NO HTML
-        document.getElementById("botaoEnviar").disabled = false;
+        const botaoValidado = document.getElementById("botaoEnviar");
+        botaoValidado.disabled = false;
+        botaoValidado.classList.add("botaoAtivado")
         // CHAMA A FUNÇÃO QUE SOMA OS PONTOS DE CADA QUESTÃO
         return somar()
     } else {
