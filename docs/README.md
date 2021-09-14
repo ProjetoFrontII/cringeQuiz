@@ -3,7 +3,7 @@
 ## Jogo que avalia se o usuário é 'cringe'
 
 ### Funções no Javascript:
-![Diagrama JS](/imagem/Checkpoint_01-imagem.jpg)
+![Diagrama JS](./imagem/Checkpoint_01-imagem.jpg)
 
 ## COLABORADORES:
 * Sophia Fiama https://github.com/sophiafiama
